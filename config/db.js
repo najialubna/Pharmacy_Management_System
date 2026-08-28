@@ -1,14 +1,10 @@
 const mysql = require("mysql2");
 
 const db = mysql.createConnection({
-    host: "pharmacy-mysql-pharmacy-db-najia.a.aivencloud.com",
-    port: 13288,
-    user: "pharmacyuser2",
-    password: "process.env.DB_PASSWORD",
-    database: "faultdb",
-    ssl: {
-        rejectUnauthorized: false
-    }
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "pharmacy_db"
 });
 
 db.connect((err) => {
