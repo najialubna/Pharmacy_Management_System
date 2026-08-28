@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sales</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>Pharmacy Management System</h1>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="medicines.html">Medicines</a>
+<a href="add-medicine.html">Add Medicine</a>
+<a href="inventory.html">Inventory</a>
+<a href="sales.html">Sales</a>
+<a href="about.html">About</a>
+
+</nav>
+
+
+</header>
+
+
+
+<section class="hero">
+
+
+<h2>Sales Management</h2>
+
+
+
+<form id="salesForm">
+
+
+<input 
+type="text" 
+id="customer"
+placeholder="Customer Name"
+required>
+
+<br><br>
+
+<select id="saleMedicine" required>
+
+    <option value="">Select Medicine</option>
+
+</select>
+
+
+<br><br>
+
+
+<input 
+type="number" 
+id="saleQuantity"
+placeholder="Quantity"
+required>
+
+<br><br>
+
+
+<input 
+type="number" 
+id="salePrice"
+placeholder="Price"
+required>
+
+
+<br><br>
+
+
+<button type="submit">
+Add Sale
+</button>
+
+
+</form>
+
+<br><br>
+
+<h2>Sales Records</h2>
+
+
+<table>
+
+<tr>
+
+<th>Invoice No</th>
+
+<th>Customer</th>
+
+<th>Medicine</th>
+
+<th>Quantity</th>
+
+<th>Total Price</th>
+
+</tr>
+
+
+<tbody id="salesTable">
+
+</tbody>
+
+
+</table>
+
+
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Pharmacy Management System | Developed by Najia Akter Lubna
+</p>
+
+
+</footer>
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

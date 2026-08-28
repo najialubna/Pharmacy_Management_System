@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Medicine - Pharmacy Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Pharmacy Management System</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="medicines.html">Medicines</a>
+        <a href="add-medicine.html">Add Medicine</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="sales.html">Sales</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <h2>Add New Medicine</h2>
+
+    <form id="medicineForm">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Medicine Name"
+            required>
+
+        <br><br>
+
+        <input
+            type="text"
+            id="category"
+            placeholder="Category"
+            required>
+
+        <br><br>
+
+        <input
+            type="text"
+            id="company"
+            placeholder="Company"
+            required>
+
+        <br><br>
+
+        <input
+            type="number"
+            id="price"
+            placeholder="Price"
+            required>
+
+        <br><br>
+
+        <input
+            type="number"
+            id="quantity"
+            placeholder="Quantity"
+            required>
+
+        <br><br>
+
+        <input
+            type="date"
+            id="expiry"
+            required>
+
+        <br><br>
+
+        <!-- Medicine Image -->
+        <label for="image">
+            Medicine Image:
+        </label>
+
+        <br><br>
+
+        <input
+            type="file"
+            id="image"
+            accept="image/*">
+
+        <br><br>
+
+        <button type="submit">
+            Add Medicine
+        </button>
+
+    </form>
+
+    <p>
+        © 2026 Pharmacy Management System | Developed by Najia Akter Lubna
+    </p>
+
+    <script src="js/add-medicine.js"></script>
+
+</body>
+</html>
