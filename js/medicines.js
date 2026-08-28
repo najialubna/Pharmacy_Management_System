@@ -2,7 +2,7 @@ const table = document.getElementById("medicineTable");
 
 if (table) {
 
-    fetch("http://localhost:5000/api/medicines")
+    fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/medicines")
         .then(response => response.json())
         .then(medicines => {
 
@@ -15,7 +15,7 @@ if (table) {
                 if (medicine.image) {
                     imageHTML = `
                         <img
-                            src="http://localhost:5000/uploads/${medicine.image}"
+                            src="https://pharmacy-management-backend-sdqp.onrender.com/uploads/${medicine.image}"
                             width="60"
                             height="60"
                             alt="Medicine Image"
@@ -102,7 +102,7 @@ async function deleteMedicine(id) {
         try {
 
             const response = await fetch(
-                `http://localhost:5000/api/medicines/${id}`,
+                `https://pharmacy-management-backend-sdqp.onrender.com/api/medicines/${id}`,
                 {
                     method: "DELETE"
                 }
@@ -152,7 +152,7 @@ async function editMedicine(id) {
 
         // First get existing medicine
         const getResponse = await fetch(
-            `http://localhost:5000/api/medicines`
+            `https://pharmacy-management-backend-sdqp.onrender.com/api/medicines`
         );
 
         const medicines = await getResponse.json();
@@ -168,7 +168,7 @@ async function editMedicine(id) {
 
         // Update medicine
         const response = await fetch(
-            `http://localhost:5000/api/medicines/${id}`,
+            `https://pharmacy-management-backend-sdqp.onrender.com/api/medicines/${id}`,
             {
 
                 method: "PUT",

@@ -22,7 +22,7 @@ if (form) {
                 formData.append("image", imageFile);
 
                 const uploadResponse = await fetch(
-                    "http://localhost:5000/api/upload",
+                    "https://pharmacy-management-backend-sdqp.onrender.com/api/upload",
                     {
                         method: "POST",
                         body: formData
@@ -61,7 +61,7 @@ if (form) {
 
             
             const response = await fetch(
-                "http://localhost:5000/api/medicines",
+                "https://pharmacy-management-backend-sdqp.onrender.com/api/medicines",
                 {
                     method: "POST",
 

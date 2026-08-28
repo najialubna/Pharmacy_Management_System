@@ -27,7 +27,6 @@ if (loginForm) {
 
 }
 
-// Check Login
 if (
     localStorage.getItem("loggedIn") !== "true" &&
     !window.location.pathname.includes("login.html")
@@ -35,7 +34,7 @@ if (
     window.location.href = "login.html";
 }
 
-// Logout
+
 function logout() {
 
     localStorage.removeItem("loggedIn");

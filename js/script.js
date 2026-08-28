@@ -19,7 +19,7 @@ if (form) {
 
         try {
 
-            const response = await fetch("http://localhost:5000/api/medicines", {
+            const response = await fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/medicines", {
 
                 method: "POST",
 
@@ -52,7 +52,7 @@ const table = document.getElementById("medicineTable");
 
 if (table) {
 
-    fetch("http://localhost:5000/api/medicines")
+    fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/medicines")
         .then(response => response.json())
         .then(medicines => {
 
@@ -118,7 +118,7 @@ async function deleteMedicine(id){
         try{
 
             const response = await fetch(
-                `http://localhost:5000/api/medicines/${id}`,
+                `https://pharmacy-management-backend-sdqp.onrender.com/api/medicines/${id}`,
                 {
                     method: "DELETE"
                 }
@@ -164,7 +164,7 @@ async function editMedicine(id) {
 
     try {
 
-        const response = await fetch(`http://localhost:5000/api/medicines/${id}`, {
+        const response = await fetch(`https://pharmacy-management-backend-sdqp.onrender.com/api/medicines/${id}`, {
 
             method: "PUT",
 
@@ -202,7 +202,7 @@ async function editMedicine(id) {
 
 if (inventoryTable) {
 
-    fetch("http://localhost:5000/api/medicines")
+    fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/medicines")
         .then(response => response.json())
         .then(medicines => {
 
@@ -248,7 +248,7 @@ if (salesForm) {
     const medicineSelect = document.getElementById("saleMedicine");
 
     
-    fetch("http://localhost:5000/api/medicines")
+    fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/medicines")
         .then(response => response.json())
         .then(medicines => {
 
@@ -265,7 +265,7 @@ if (salesForm) {
         });
 
     
-    fetch("http://localhost:5000/api/sales")
+    fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/sales")
         .then(response => response.json())
         .then(sales => {
 
@@ -306,7 +306,7 @@ if (salesForm) {
 
         try {
 
-            const response = await fetch("http://localhost:5000/api/sales", {
+            const response = await fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/sales", {
 
                 method: "POST",
 
