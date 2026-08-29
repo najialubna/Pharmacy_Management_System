@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,62 +6,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Medicines - Pharmacy Management System</title>
+    <title>Medicines</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<header>
+
     <h1>Pharmacy Management System</h1>
 
     <nav>
+
         <a href="index.html">Home</a>
         <a href="medicines.html">Medicines</a>
         <a href="add-medicine.html">Add Medicine</a>
         <a href="inventory.html">Inventory</a>
         <a href="sales.html">Sales</a>
         <a href="about.html">About</a>
+
     </nav>
+
+</header>
+
+
+<section class="hero">
 
     <h2>Medicine List</h2>
 
-    <!-- Search -->
     <input
         type="text"
         id="search"
-        placeholder="Search Medicine"
+        placeholder="Search Medicine..."
         onkeyup="searchMedicine()"
     >
 
     <br><br>
 
-    <table border="1" width="80%" align="center" cellpadding="10">
+    <table>
 
         <thead>
+
             <tr>
+
                 <th>Image</th>
                 <th>Medicine</th>
                 <th>Category</th>
                 <th>Price</th>
                 <th>Stock</th>
                 <th>Action</th>
+
             </tr>
+
         </thead>
 
         <tbody id="medicineTable">
+
         </tbody>
 
     </table>
+
+</section>
+
+
+<footer>
 
     <p>
         © 2026 Pharmacy Management System | Developed by Najia Akter Lubna
     </p>
 
+</footer>
 
-    <!-- IMPORTANT -->
-    <script src="js/medicines.js"></script>
+
+<script src="js/medicines.js"></script>
 
 </body>
 
 </html>
+```

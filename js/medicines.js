@@ -15,7 +15,7 @@ if (table) {
                 if (medicine.image) {
                     imageHTML = `
                         <img
-                            src="https://pharmacy-management-backend-sdqp.onrender.com/uploads/${medicine.image}"
+                            src="/uploads/${medicine.image}"
                             width="60"
                             height="60"
                             alt="Medicine Image"

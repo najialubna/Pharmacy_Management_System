@@ -19,7 +19,7 @@ if (form) {
 
         try {
 
-            const response = await fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/medicines", {
+            const response = await fetch("/api/medicines", {
 
                 method: "POST",
 
@@ -52,20 +52,32 @@ const table = document.getElementById("medicineTable");
 
 if (table) {
 
-    fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/medicines")
+    fetch("/api/medicines")
         .then(response => response.json())
         .then(medicines => {
 
             medicines.forEach((medicine) => {
 
-                table.innerHTML += `
-                <tr>
-                    <td>No Image</td>
-                    <td>${medicine.name}</td>
-                    <td>${medicine.category}</td>
-                    <td>${medicine.price} Tk</td>
-                    <td>${medicine.quantity}</td>
-                    <td>
+              let imageHTML = "No Image";
+
+if (medicine.image) {
+    imageHTML = `
+        <img
+            src="/uploads/${medicine.image}"
+            width="60"
+            height="60"
+            alt="Medicine Image"
+            style="object-fit: cover; border-radius: 5px;">
+    `;
+}
+
+table.innerHTML += `
+<tr>
+    <td>${imageHTML}</td>
+    <td>${medicine.name}</td>
+    <td>${medicine.category}</td>
+    <td>${medicine.price} Tk</td>
+    <td>${medicine.quantity}</td>
     
     <button onclick="editMedicine(${medicine.id})">Edit</button>
     <button onclick="deleteMedicine(${medicine.id})">Delete</button>
@@ -117,12 +129,13 @@ async function deleteMedicine(id){
 
         try{
 
-            const response = await fetch(
-                `https://pharmacy-management-backend-sdqp.onrender.com/api/medicines/${id}`,
-                {
-                    method: "DELETE"
-                }
-            );
+           const response = await fetch(
+    `/api/medicines/${id}`,
+    {
+        method: "DELETE"
+    }
+);
+            
 
             const data = await response.json();
 
@@ -164,7 +177,7 @@ async function editMedicine(id) {
 
     try {
 
-        const response = await fetch(`https://pharmacy-management-backend-sdqp.onrender.com/api/medicines/${id}`, {
+        const response = await fetch(`/api/medicines/${id}`, {
 
             method: "PUT",
 
@@ -202,7 +215,7 @@ async function editMedicine(id) {
 
 if (inventoryTable) {
 
-    fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/medicines")
+    fetch("/api/medicines")
         .then(response => response.json())
         .then(medicines => {
 
@@ -248,7 +261,7 @@ if (salesForm) {
     const medicineSelect = document.getElementById("saleMedicine");
 
     
-    fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/medicines")
+   fetch("/api/medicines")
         .then(response => response.json())
         .then(medicines => {
 
@@ -265,7 +278,7 @@ if (salesForm) {
         });
 
     
-    fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/sales")
+    fetch("/api/sales")
         .then(response => response.json())
         .then(sales => {
 
@@ -306,7 +319,7 @@ if (salesForm) {
 
         try {
 
-            const response = await fetch("https://pharmacy-management-backend-sdqp.onrender.com/api/sales", {
+            const response = await fetch("/api/sales", {
 
                 method: "POST",
 

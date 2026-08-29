@@ -1,4 +1,3 @@
-
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
@@ -71,12 +70,14 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
 });
 
 
+const frontendPath = path.join(__dirname, "..");
+
+app.use(express.static(frontendPath));
 
 app.get("/", (req, res) => {
-
-    res.send("Pharmacy Backend Running");
-
+    res.sendFile(path.join(frontendPath, "index.html"));
 });
+
 
 
 
